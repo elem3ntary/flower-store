@@ -1,9 +1,6 @@
 package flowerstore;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,6 +9,7 @@ import java.util.List;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString
 public class FlowerBucket {
     @Builder.Default
     private List<FlowerPack> flowerPackList = new ArrayList<>() {
@@ -29,6 +27,15 @@ public class FlowerBucket {
             totalPrice += flowerPack.price();
         }
         return totalPrice;
+    }
+
+    public boolean containsFlowerType(FlowerType flowerType) {
+        for(FlowerPack flowerPack: flowerPackList) {
+            if (flowerPack.getFlowerType() == flowerType) {
+                return true;
+            }
+        }
+        return false;
     }
 
 }

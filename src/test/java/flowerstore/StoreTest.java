@@ -16,9 +16,9 @@ class StoreTest {
         store = new Store();
     }
 
-    @Test
-    @SneakyThrows
-    void search() {
-        assertThrows(Error.class, () -> store.search("tulip"));
-    }
+//    @Test
+//    @SneakyThrows
+//    void search() {
+//        assertThrows(Error.class, () -> store.search("tulip"));
+//    }
 }
