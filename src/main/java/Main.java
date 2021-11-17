@@ -2,6 +2,11 @@ import decorator.BasketDecorator;
 import decorator.KibbonDecorator;
 import decorator.PaperDecorator;
 import flowerstore.*;
+import order.QuickOrder;
+import users.Receiver;
+import users.Sender;
+import users.User;
+import users.UserId;
 
 public class Main {
     public static void main(String[] args) {
@@ -25,12 +30,23 @@ public class Main {
 //
 //        store.search("Tulip");
 
-        Item buket = new FlowerBucket();
-        buket = new BasketDecorator(buket);
-        buket = new PaperDecorator(buket);
-        buket = new KibbonDecorator(buket);
+//        Item buket = new FlowerBucket();
+//        buket = new BasketDecorator(buket);
+//        buket = new PaperDecorator(buket);
+//        buket = new KibbonDecorator(buket);
+//
+//        System.out.println(buket.getPrice());
 
-        System.out.println(buket.getPrice());
+//        UserId user = new Sender();
+//        UserId user1 = new Sender();
+//        UserId user2 = new Sender();
+//        UserId user3 = new Sender();
+//        UserId user4 = new Receiver();
+//        System.out.println(user4.getCurrentUserId());
+
+        QuickOrder quickOrder = new QuickOrder();
+        quickOrder.processOrder();
+
     }
 
 
