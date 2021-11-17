@@ -10,7 +10,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class FlowerBucket {
+public class FlowerBucket extends Item {
     @Builder.Default
     private List<FlowerPack> flowerPackList = new ArrayList<>() {
     };
@@ -20,11 +20,11 @@ public class FlowerBucket {
         flowerPackList.add(flowerPack);
     }
 
-    public double price() {
+    public double getPrice() {
         double totalPrice = 0;
         for (FlowerPack flowerPack : flowerPackList
         ) {
-            totalPrice += flowerPack.price();
+            totalPrice += flowerPack.getPrice();
         }
         return totalPrice;
     }
@@ -38,4 +38,8 @@ public class FlowerBucket {
         return false;
     }
 
+    @Override
+    public String getDescription() {
+        return null;
+    }
 }

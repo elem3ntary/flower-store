@@ -15,7 +15,7 @@ class FlowerPackTest {
 
     @Test
     void price() {
-        assertEquals(5 * 10, flowerPack.price());
+        assertEquals(5 * 10, flowerPack.getPrice());
     }
 
     @Test

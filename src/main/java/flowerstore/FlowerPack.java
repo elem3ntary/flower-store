@@ -9,7 +9,7 @@ public class FlowerPack {
     private Flower flower;
     private int amount;
 
-    public double price() {
+    public double getPrice() {
         return flower.getPrice() * amount;
     }
     public FlowerType getFlowerType() {
